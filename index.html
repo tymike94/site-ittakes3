@@ -26,13 +26,13 @@
         }
         .swiper-container {
             width: 100%;
-            padding-top: 50px;
+            padding-top: 20px; /* Réduit pour mobile */
             padding-bottom: 50px;
         }
         .swiper-slide {
             background-position: center;
             background-size: cover;
-            width: 250px; /* Taille des images dans le carrousel */
+            width: 240px; /* Réduit pour mobile */
         }
     </style>
 </head>
@@ -40,12 +40,12 @@
 
     <!-- ========== Header ========== -->
     <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 sm:space-x-3">
                 <img src="images/splash.png" alt="Logo It Takes 3" class="h-8 w-8">
-                <span class="text-2xl font-bold text-indigo-900">It Takes 3</span>
+                <span class="text-xl sm:text-2xl font-bold text-indigo-900">It Takes 3</span>
             </a>
-            <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="bg-emerald-500 text-white font-bold py-2 px-5 rounded-lg hover:bg-emerald-600 transition-colors">
+            <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="bg-emerald-500 text-white font-bold py-2 px-4 text-sm sm:text-base rounded-lg hover:bg-emerald-600 transition-colors">
                 Devenir Testeur
             </a>
         </div>
@@ -53,16 +53,16 @@
 
     <main>
         <!-- ========== Hero Section ========== -->
-        <section class="hero-gradient pt-32 pb-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-black text-indigo-900 leading-tight">
+        <section class="hero-gradient pt-28 sm:pt-32 pb-16 sm:pb-20">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-black text-indigo-900 leading-tight">
                     Et si on arrêtait de tout vouloir faire ?
                 </h1>
-                <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
                     J'ai créé "It Takes 3" pour vaincre la procrastination avec une idée simple : se concentrer sur **3 tâches par jour**. Aidez-moi à lancer l'application en devenant bêta-testeur !
                 </p>
                 <div class="mt-8">
-                    <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="inline-block bg-emerald-500 text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-emerald-600 transition-transform hover:scale-105 shadow-lg">
+                    <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="inline-block bg-emerald-500 text-white font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-8 rounded-lg hover:bg-emerald-600 transition-transform hover:scale-105 shadow-lg">
                         Rejoindre le test fermé
                     </a>
                 </div>
@@ -70,10 +70,10 @@
         </section>
 
         <!-- ========== Gallery Section (Carousel) ========== -->
-        <section class="py-20 bg-white overflow-hidden">
-            <div class="container mx-auto px-6">
+        <section class="py-16 sm:py-20 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-4">
-                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900">Découvrez l'application en images</h2>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900">Découvrez l'application</h2>
                 </div>
                 <!-- Swiper -->
                 <div class="swiper-container mySwiper">
@@ -89,43 +89,105 @@
                 </div>
             </div>
         </section>
+        
+        <!-- ========== How it Works Section ========== -->
+        <section class="py-16 sm:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900">Simple comme 1, 2, 3</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10 text-center max-w-4xl mx-auto">
+                    <div>
+                        <div class="text-5xl sm:text-6xl font-black text-indigo-200">1</div>
+                        <h3 class="text-lg sm:text-xl font-bold mt-2">Définissez</h3>
+                        <p class="mt-2 text-gray-600">Chaque matin, choisissez vos 3 objectifs principaux.</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl sm:text-6xl font-black text-indigo-200">2</div>
+                        <h3 class="text-lg sm:text-xl font-bold mt-2">Accomplissez</h3>
+                        <p class="mt-2 text-gray-600">Cochez vos tâches au fur et à mesure de leur complétion.</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl sm:text-6xl font-black text-indigo-200">3</div>
+                        <h3 class="text-lg sm:text-xl font-bold mt-2">Validez</h3>
+                        <p class="mt-2 text-gray-600">Terminez votre journée pour gagner des récompenses !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ========== Who is it for Section ========== -->
+        <section class="py-16 sm:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900">Pour qui est It Takes 3 ?</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 text-3xl mb-4">🎓</div>
+                        <h3 class="font-bold">L'étudiant</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 text-3xl mb-4">💻</div>
+                        <h3 class="font-bold">Le freelance</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 text-3xl mb-4">🎨</div>
+                        <h3 class="font-bold">Le créateur</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 text-3xl mb-4">🎯</div>
+                        <h3 class="font-bold">Le procrastinateur</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ========== Values Section ========== -->
-        <section id="values" class="py-20">
-            <div class="container mx-auto px-6">
+        <section id="values" class="py-16 sm:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900">Une application conçue pour vous.</h2>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900">Une application conçue pour vous.</h2>
                     <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Pas pour vos données.</p>
                 </div>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-emerald-600">Productivité Saine</h3>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-emerald-600">Productivité Saine</h3>
                         <p class="text-gray-600">Le but n'est pas de vous surcharger, mais de vous aider à construire une dynamique positive et durable, sans stress ni culpabilité.</p>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-emerald-600">Respect de la vie privée</h3>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-emerald-600">Respect de la vie privée</h3>
                         <p class="text-gray-600">Votre confiance est essentielle. L'application ne collecte que le strict minimum pour fonctionner. Pas de pub, pas de trackers, pas de vente de données. Jamais.</p>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-emerald-600">Motivation par le jeu</h3>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-emerald-600">Motivation par le jeu</h3>
                         <p class="text-gray-600">La gamification (XP, niveaux, badges) est là pour rendre l'effort gratifiant et vous encourager à rester régulier dans votre parcours.</p>
                     </div>
                      <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-emerald-600">Soutien de la communauté</h3>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-emerald-600">Soutien de la communauté</h3>
                         <p class="text-gray-600">Les fonctionnalités sociales (amis, classement) sont conçues pour créer un environnement de soutien et de compétition saine, pas pour comparer les vies.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ========== Creator Note Section ========== -->
+        <section class="py-16 sm:py-20 bg-indigo-50">
+            <div class="container mx-auto px-4 sm:px-6 text-center max-w-3xl">
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-900">Un mot du créateur</h2>
+                <p class="mt-4 text-gray-700 italic leading-relaxed">
+                    "Salut, c'est Thomas. J'ai développé It Takes 3 sur mon temps libre parce que j'étais moi-même paralysé par des listes de tâches interminables. Cette méthode simple m'a vraiment aidé, et j'espère de tout cœur qu'elle pourra vous aider aussi. Votre soutien en tant que testeur est la dernière étape pour donner vie à ce projet. Merci !"
+                </p>
+            </div>
+        </section>
+
         <!-- ========== Final CTA ========== -->
         <section class="bg-indigo-800 text-white">
-            <div class="container mx-auto px-6 py-20 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold">Prêt à faire partie de l'aventure ?</h2>
-                <p class="mt-4 text-lg text-indigo-200 max-w-2xl mx-auto">Votre avis est crucial pour faire de "It Takes 3" la meilleure application possible. Rejoignez le test et aidez à construire un outil qui compte.</p>
+            <div class="container mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Prêt à faire partie de l'aventure ?</h2>
+                <p class="mt-4 text-base sm:text-lg text-indigo-200 max-w-2xl mx-auto">Votre avis est crucial pour faire de "It Takes 3" la meilleure application possible. Rejoignez le test et aidez à construire un outil qui compte.</p>
                 <div class="mt-8">
-                    <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="inline-block bg-white text-indigo-800 font-bold text-lg py-4 px-8 rounded-lg hover:bg-gray-200 transition-transform hover:scale-105 shadow-lg">
+                    <a href="https://forms.gle/88fBw9Biuf7jQVsQ9" target="_blank" class="inline-block bg-white text-indigo-800 font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-8 rounded-lg hover:bg-gray-200 transition-transform hover:scale-105 shadow-lg">
                         Je veux devenir bêta-testeur !
                     </a>
                 </div>
