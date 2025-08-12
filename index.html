@@ -14,12 +14,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
+    <!-- Swiper.js for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
         }
         .hero-gradient {
             background: linear-gradient(135deg, #F8FAFC 0%, #E0E7FF 100%);
+        }
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 250px; /* Taille des images dans le carrousel */
         }
     </style>
 </head>
@@ -29,7 +42,6 @@
     <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3">
-                <!-- MODIFIÉ : Chemin vers le logo mis à jour -->
                 <img src="images/splash.png" alt="Logo It Takes 3" class="h-8 w-8">
                 <span class="text-2xl font-bold text-indigo-900">It Takes 3</span>
             </a>
@@ -57,14 +69,23 @@
             </div>
         </section>
 
-        <!-- ========== Gallery Section ========== -->
-        <section class="py-20 bg-white">
+        <!-- ========== Gallery Section (Carousel) ========== -->
+        <section class="py-20 bg-white overflow-hidden">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- MODIFIÉ : Chemins vers les captures d'écran mis à jour -->
-                    <img src="images/homescreen.jpg" alt="Écran d'accueil de It Takes 3" class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform">
-                    <img src="images/profil.jpg" alt="Profil utilisateur avec badges" class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform mt-8 md:mt-0">
-                    <img src="images/panthéon.jpg" alt="Classement social dans le Panthéon" class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform mt-8 md:mt-0">
+                <div class="text-center mb-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900">Découvrez l'application en images</h2>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/homescreen.jpg" class="rounded-2xl shadow-xl"></div>
+                        <div class="swiper-slide"><img src="images/homescreenvalidé.jpg" class="rounded-2xl shadow-xl"></div>
+                        <div class="swiper-slide"><img src="images/profil.jpg" class="rounded-2xl shadow-xl"></div>
+                        <div class="swiper-slide"><img src="images/panthéon.jpg" class="rounded-2xl shadow-xl"></div>
+                        <div class="swiper-slide"><img src="images/historique.jpg" class="rounded-2xl shadow-xl"></div>
+                        <div class="swiper-slide"><img src="images/signinscreen.jpg" class="rounded-2xl shadow-xl"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -119,5 +140,26 @@
         </div>
     </footer>
 
+    <!-- Swiper.js Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 </html>
